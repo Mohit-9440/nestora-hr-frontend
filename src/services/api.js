@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5001/api",
+  baseURL: "https://nestora-hr-backend-production.up.railway.app/api",
 });
 
 // Attach token automatically on every request
