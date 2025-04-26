@@ -15,11 +15,12 @@ API.interceptors.request.use((config) => {
 
 // Auth
 export const loginUser = (payload) => API.post("/auth/login", payload);
-
+export const signupUser = (payload) => API.post("/auth/signup", payload);
 // Leaves
 export const applyLeave = (payload) => API.post("/leaves/apply", payload);
 export const getMyLeaves = () => API.get("/leaves/my");
 export const getAllLeaves = () => API.get("/leaves");
-export const approveLeave = (id, status) => API.patch(`/leaves/${id}`, { status });
+export const approveLeave = (id, status) =>
+  API.patch(`/leaves/${id}`, { status });
 
 export default API;
