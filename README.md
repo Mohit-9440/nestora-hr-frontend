@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# 🚀 NestoraHR Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**NestoraHR** is a full-stack leave management system designed to streamline HR operations, built with **React.js**, **TailwindCSS**, and deployed live on **Vercel**.
 
-## Available Scripts
+This repository contains the **frontend application** for the NestoraHR platform.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🖥️ Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🌐 [NestoraHR Live Website](https://nestorahr.vercel.app)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend Framework:** React.js
+- **Styling:** TailwindCSS
+- **Routing:** React Router DOM
+- **Form Handling:** Formik & Yup
+- **Animations:** AOS (Animate on Scroll)
+- **Toast Notifications:** react-hot-toast
+- **Axios** for API Requests
+- **Deployed On:** Vercel
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ Local Setup Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/Mohit-9440/nestora-hr-frontend.git
+```
 
-### `npm run eject`
+2. **Navigate to the project directory:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+cd nestora-hr-frontend
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Install dependencies:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4.	**Start the development server:**
 
-## Learn More
+```bash
+    npm run dev
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5.	**Open http://localhost:3000 to view the app in your browser**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔗 Backend Repository
 
-### Analyzing the Bundle Size
+👉 [NestoraHR Backend GitHub Repo](https://github.com/Mohit-9440/nestora-hr-backend)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📦 Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```plaintext
+src/
+  ├── components/      # Reusable UI components (Navbar, ProtectedRoute, etc.)
+  ├── pages/           # Pages (Login, Signup, AdminHome, EmployeeHome, LandingPage)
+  ├── services/        # Axios API services
+  ├── App.jsx          # Main application routes
+  ├── index.css        # TailwindCSS + Global Styles
+  └── main.jsx         # React entry point
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## ✨ Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Secure authentication using JWT
+- Role-based dashboards (Admin / Employee)
+- Real-time leave request submission and approval
+- Fully responsive UI
+- Smooth animations and clean UX
+- Professional SEO tags, meta descriptions, and OpenGraph tags for social media sharing
+- Favicon and branding completed
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🎯 Upcoming Enhancements (NestoraHR 2.0)
+
+- Leave History with filters & search
+- Admin bulk approval/rejection
+- Notifications for users
+- Profile picture uploads
+- Leave analytics and stats dashboard
+
+---
+
+## 👨‍💻 Author
+
+**Mohit Sharma**
+
+- 🌐 [Portfolio Website (Coming Soon)](#)
+- 💼 [LinkedIn](https://www.linkedin.com/in/mohit-frontend-developer/)
+- 📝 [Medium Blog](https://medium.com/@mohitsharma8864/building-nestorahr-a-full-stack-leave-management-system-from-scratch-159fef6739eb)
+
+---
+
+## 🛡️ License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
