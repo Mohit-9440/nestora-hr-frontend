@@ -1,22 +1,32 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import { getLeaves, approveLeave } from "../services/api";
+import { getAllLeaves, approveLeave } from "../services/api";
 
 function AdminHome() {
   const [leaves, setLeaves] = useState([]);
+
+  const fetchLeaves = async () => {
+    try {
+      const res = await getAllLeaves();
+      setLeaves(res.data);
+    } catch (error) {
+      console.error(error);
+      alert("Failed to fetch leaves");
+    }
+  };
 
   useEffect(() => {
     fetchLeaves();
   }, []);
 
-  const fetchLeaves = async () => {
-    const res = await getLeaves();
-    setLeaves(res.data);
-  };
-
   const updateStatus = async (id, status) => {
-    await approveLeave(id, status);
-    fetchLeaves();
+    try {
+      await approveLeave(id, status);
+      fetchLeaves(); // Refresh leaves after status change
+    } catch (error) {
+      console.error(error);
+      alert("Failed to update leave status");
+    }
   };
 
   return (
@@ -29,9 +39,7 @@ function AdminHome() {
           </h2>
 
           {leaves.length === 0 ? (
-            <p className="text-gray-600 text-center">
-              No leave applications found.
-            </p>
+            <p className="text-gray-600 text-center">No leave applications found.</p>
           ) : (
             <div className="space-y-4">
               {leaves.map((leave) => (
@@ -53,8 +61,7 @@ function AdminHome() {
                           : "text-yellow-500"
                       }`}
                     >
-                      {leave.status.charAt(0).toUpperCase() +
-                        leave.status.slice(1)}
+                      {leave.status.charAt(0).toUpperCase() + leave.status.slice(1)}
                     </span>
                   </div>
 
