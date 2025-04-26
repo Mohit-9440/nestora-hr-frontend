@@ -3,6 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Navbar from "../components/Navbar";
 import { applyLeave, getMyLeaves } from "../services/api";
+import { toast } from "react-hot-toast";
 
 function EmployeeHome() {
   const [startDate, setStartDate] = useState(null);
@@ -16,7 +17,7 @@ function EmployeeHome() {
       setMyLeaves(res.data);
     } catch (error) {
       console.error(error);
-      alert("Failed to fetch leave history");
+      toast.error("Failed to fetch leave history");
     }
   };
 
@@ -26,7 +27,7 @@ function EmployeeHome() {
 
   const handleApplyLeave = async () => {
     if (!startDate || !endDate || !reason) {
-      alert("Please fill all fields!");
+      toast.error("Please fill all fields!");
       return;
     }
 
@@ -37,14 +38,14 @@ function EmployeeHome() {
         reason,
       });
 
-      alert("Leave Applied Successfully!");
+      toast.success("Leave Applied Successfully!");
       setStartDate(null);
       setEndDate(null);
       setReason("");
       fetchMyLeaves();
     } catch (error) {
       console.error(error);
-      alert("Failed to apply leave");
+      toast.error("Failed to apply leave");
     }
   };
 

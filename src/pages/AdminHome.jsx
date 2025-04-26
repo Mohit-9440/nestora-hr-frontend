@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { getAllLeaves, approveLeave } from "../services/api";
+import { toast } from "react-hot-toast";
 
 function AdminHome() {
   const [leaves, setLeaves] = useState([]);
@@ -11,7 +12,7 @@ function AdminHome() {
       setLeaves(res.data);
     } catch (error) {
       console.error(error);
-      alert("Failed to fetch leaves");
+      toast.error("Failed to fetch leaves");
     }
   };
 
@@ -25,7 +26,7 @@ function AdminHome() {
       fetchLeaves(); // Refresh leaves after status change
     } catch (error) {
       console.error(error);
-      alert("Failed to update leave status");
+      toast.error("Failed to update leave status");
     }
   };
 
